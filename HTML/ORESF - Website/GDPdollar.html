@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВВП</title>
+    <link rel="icon" href="logotab.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area').getContext('2d');
+            const chartData = {
+                labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [
+                    {
+                        label: 'ВВП',
+                        data: [60114, 68103.4, 72985.7, 79030, 83087.4, 85616.1, 91843.2, 103861.7, 109608.3, 107658.1, 135773.8, 155188.9, 172148,3],
+                        borderColor: 'rgb(29,112,44)',
+                        backgroundColor: 'rgba(29,86,44, 0.5)',
+                        fill: false
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: chartData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #21c0d9;
+    color: white;
+    padding: 0px;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 0;
+    z-index: 1;
+    }
+    .logo_img {
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    }
+    hr {
+    border: none;
+    border-top: 5px solid #21c0d9;
+    max-width: 600px;
+    margin-left: 0px;
+    }
+    .text_p {
+    padding-top: 150px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+     .container {
+    width: 60%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 700px;/* Центрирование по горизонтали */
+    margin-top: -340px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    button {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    border: none;
+    padding: 20px 60px;
+    background: #21c0d9;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: -200px;
+    left: 90px;
+    }
+</style>
+<body>
+<div>
+    <header class="header">
+        <p style="margin-left:300px;">ОРЭСФ</p>
+        <img src="logo.png" class="logo_img">
+    </header>
+</div>
+<div class="text_p" style="color: #21c0d9;"> <!--Можно будет hr удлинить до границы диаграммы-->
+    <hr>
+    <h1>ВВП</h1>
+    <hr>
+    <p><b>В текущих ценах, млрд. рублей</b></p>
+    <p><b>Примечание:</b><br><b>2022-2023:</b> Без учета ДНР, ЛНР, Запорожья и Херсона</p>
+</div>
+<div class="container">
+    <canvas id="chart-area" width="400" height="200"></canvas>
+</div>
+<div style="color: #21c0d9;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    position: relative;
+    top: -210px;
+    left: -615px;">
+    <p><b>Вы также можете скачать Exсel-файл</p>
+</div>
+<div>
+    <a href="VVPFULL.xlsx" download=""><button>СКАЧАТЬ ПОЛНУЮ СТАТИСТИКУ</button></a>
+</div>
+</body>
+</html>

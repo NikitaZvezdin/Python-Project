@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВВП по секторам</title>
+    <link rel="icon" href="logotab.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area').getContext('2d');
+            const chartData = {
+                labels: ['Сельскохозяйственное сырье', 'Добыча полезных ископаемых', 'Обрабатывающие производства', 'Электрическая энергия', 'Водоснабжением', 'Строительство', 'Металлы и драгоценные металлы', 'Торговля оптовая и розничная', 'Транспортировка и хранение', 'Предприятие общественного питания', 'Информация и связь', 'Финансовый сектор', 'Сектор недвижимости', 'Научный сектор', 'Административный и дополнительные услуги', 'Военный и социальный сектор', 'Образование', 'Здравоохранение и социальные услуги', 'Культура и спорт', 'Сектор услуг', 'Деятельность и домашних хозяйств', 'Налоги на продукцию'],
+                datasets: [
+                    {
+                        label: 'Сектора экономики',
+                        data: [5973.1, 19472.7, 20943.4, 3195.1, 625.3, 7219.4, 17175.4, 8578.3, 1171.4, 3801.2, 6651.2, 15004.6, 6055.6, 3107.1, 9924.7, 4061.5, 4851, 1279.6, 649.4, 394.1, 11321.4],
+                        backgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBackgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBorderColor: 'rgba(234, 236, 244, 1)',
+                        borderColor: 'rgba(234, 236, 244, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #21c0d9;
+    color: white;
+    padding: 0px;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 0;
+    z-index: 1;
+    }
+    .logo_img {
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    }
+    hr {
+    border: none;
+    border-top: 5px solid #21c0d9;
+    max-width: 600px;
+    margin-left: 0px;
+    }
+    .text_p {
+    padding-top: 150px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .container {
+    width: 40%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 800px;/* Центрирование по горизонтали */
+    margin-top: -350px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    .text_d {
+    padding-top: 100px;
+    padding-left: 900px;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: -100px;
+    margin-bottom: 5px;
+    }
+</style>
+<body>
+<div>
+    <header class="header">
+        <p style="margin-left:300px;">ОРЭСФ</p>
+        <img src="logo.png" class="logo_img">
+    </header>
+</div>
+<div class="text_p" style="color: #21c0d9;"> <!--Можно будет hr удлинить до границы диаграммы-->
+    <hr>
+    <h1>ВВП ПО СЕКТОРАМ</h1>
+    <hr>
+    <p><b>За 2022 год в млрд рублей </b></p>
+    <p><b>Всего:</b><br><b>140134,2 млрд рублей</b></p>
+</div>
+<div class="container">
+    <canvas id="chart-area" width="400" height="200"></canvas>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОРЭСФ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logotab.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <p style="margin-left:300px;">ОРЭСФ</p>
+        <img src="logo.png" class="logo_img">
+        <span style="font-size:80px;cursor:pointer" onclick="openNav()" class="pos">&#9776;</span>
+    </header>
+<div>
+    <div class="text_txt"><span style="color: #21c0d9;">О</span>бщий<br><span style="color: #21c0d9;">Р</span>оссийский<br><span style="color: #21c0d9;">Э</span>кономический<br><span style="color: #21c0d9;">С</span>татистический<br><span style="color: #21c0d9;">Ф</span>онд</div>
+    <img src="moscowcity.jpg" class="img_moscowcity">
+</div>
+<div class="txt">
+    <hr>
+    <h3><b>О нас:</b><br></h3>
+    ОРЭСФ - Это некоммерческая организация, основанная Шаровым Николаем Артёмовичем в 2024 году.<br>
+    <hr>
+</div>
+<div class="txt1">
+    <hr>
+    <h3><b>Наша цель:</b><br></h3>
+    Обеспечить удобный и быстрый доступ к основным экономическим показателям страны любому человеку, а также повысить среди населения нашей страны экономическую грамотность.<br>
+    <hr>
+</div>
+<div class="txt2">
+    <hr>
+    <h3><b>Что вы сможете найти на нашем сайте</b><br></h3>
+    Наш сайт предоставляет доступ к таким экономическим показателям, как:<br>
+    ВВП<br>
+    ВВП на душу населения<br>
+    ВВП по секторам<br>
+    Инфляция<br>
+    Безработица<br>
+    Уровень бедности<br>
+    Внешняя торговля<br>
+    Государственный долг<br>
+    Внешний долг<br>
+    Структура Федерального бюджета<br>
+    Трудовые ресурсы<br>
+    <hr>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a style="font-size: 40px;" ><b>Статистика</b></a>
+  <hr>
+  <a href="GDP.html"><b>ВВП</b></a>
+  <a href="humanresources.html"><b>Трудовые ресурсы</b></a>
+  <a href="inflation.html"><b>Инфляция</b></a>
+  <a href="statebudget.html"><b>Бюджет</b></a>
+  <a href="trading.html"><b>Торговля</b></a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "400px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<footer>
+    <div class="Contact_footer">
+        <h2>Контакты</h2>
+        <ul>
+            <li>+7(924)-434-32-11</li>
+            <li>oresf@yandex.com</li>
+            <li>Комсомольская улица, 18</li>
+        </ul>
+    </div>
+    <div class="Partners_footer">
+        <h2>Партнеры</h2>
+        <ul>
+            <li><a href="https://cbr.ru/" style="text-decoration: none; color:white">Центральный Банк</a></li>
+            <li><a href="https://minfin.gov.ru/" style="text-decoration: none; color:white">МинФин</a></li>
+            <li><a href="https://rosstat.gov.ru/" style="text-decoration: none; color:white">Росстат</a></li>
+        </ul>
+    </div>
+    <div class="Question_footer">
+        <h2>Вопрос-Ответ</h2>
+        <ul>
+            <li>Техническая поддержка</li>
+            <li>Чат</li>
+            <li>Форум</li>
+        </ul>
+    </div>
+    <div>
+        <img src="logo.png" class="png_footer">
+    </div>
+    <div>
+        <div class="container">
+        <div class="left-padding"><b>Настройки</b></div>
+        <div class="center-padding"><b>Уфа</b></div>
+        <div class="right-padding"><b>2024 г</b></div>
+    </div>
+</footer>
+</body>
+</html>
+
+

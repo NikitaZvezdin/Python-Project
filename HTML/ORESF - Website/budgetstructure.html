@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Структура федерального бюджета</title>
+    <link rel="icon" href="logotab.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area').getContext('2d');
+            const chartData = {
+                labels: ['Нефтегазовые доходы', 'Ненефтегазовые доходы', 'НДС', 'Акцизы', 'Налог на прибыль', 'Налог на доходы физических лиц ', 'НДС на ввозимые товары', 'Акцизы на ввозимые товары', 'Ввозные пошлины', 'Прочие'],
+                datasets: [
+                    {
+                        label: 'Доходы',
+                        data: [8822.3, 20301.8, 7182.4, 1045.8, 1918.6, 159.5, 4432, 164.2, 1110.4, 4288.8],
+                        backgroundColor: ['#46c605', '#05a7c6', '#8505c6', '#c62405', '#ca09af', '#ca8409', '#09ca24', '#b80fc4', '#c45e0f', '#10c28e'],
+                        hoverBackgroundColor: ['#c0deb4', '#F9959C', '#C5AD96', '#FFF1AD', '#B481DF', '#E0E4F0', '#FFD4C7', '#D975E1', '#7AA5D1', '#F1EBDF'],
+                        hoverBorderColor: 'rgba(234, 236, 244, 1)',
+                        borderColor: 'rgba(234, 236, 244, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area5').getContext('2d');
+            const chartData = {
+                labels: ['Общегосударственные вопросы', 'Национальная оборона', 'Национальная безопасность и правоохранительная деятельность', 'Национальная экономика', 'Жилищно-коммунальное хозяйство', 'Охрана окружающей среды', 'Образование', 'Культура, кинематография', 'Здравоохранение', 'Социальная политика', 'Физическая культура и спорт', 'Средства массовой информации', 'Обслуживание государственного и муниципального долга', 'Межбюджетные трансферты общего характера бюджетам бюджетной системы Российской Федерации'],
+                datasets: [
+                    {
+                        label: 'Расходы',
+                        data: [1759.5, 3573.6, 2335.9, 4356.6, 593.7, 405.1, 1064.4, 146.7, 1473.9, 6675.8, 70.9, 114, 1084.2, 1107.7],
+                        backgroundColor: ['#1fe0dd', '#7d1fe0', '#e01f22', '#82e01f', '#ec8d13', '#e91694', '#e9d516', '#162ae9', '#e4821b', '#e31c51', '#1c51e3', '#1477eb', '#e6191a', '#e0ea15'],
+                        hoverBackgroundColor: ['#b4f5f4', '#d3b4f5', '#f5b4b5', '#d5f5b4', '#f9ddb8', '#f9b8f5', '#f8f1b2', '#b2b9f8', '#f7d9b9', '#f7bbcb', '#b0c2f5', '#a9cdf8', '#f8bebe', '#f2f7a1'],
+                        hoverBorderColor: 'rgba(234, 236, 244, 1)',
+                        borderColor: 'rgba(234, 236, 244, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #21c0d9;
+    color: white;
+    padding: 0px;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 0;
+    z-index: 1;
+    }
+    .logo_img {
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    }
+    hr {
+    border: none;
+    border-top: 5px solid #21c0d9;
+    max-width: 600px;
+    margin-left: 0px;
+    }
+    .text_p {
+    padding-top: 150px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .container {
+    width: 25%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 700px;/* Центрирование по горизонтали */
+    margin-top: -300px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    .container5 {
+    width: 26%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 1300px;/* Центрирование по горизонтали */
+    margin-top: -540px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    .text_d {
+    padding-top: 100px;
+    padding-left: 900px;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: -100px;
+    margin-bottom: 5px;
+    }
+    button {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    border: none;
+    padding: 20px 60px;
+    background: #21c0d9;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: -180px;
+    left: 160px;
+    }
+</style>
+<body>
+<div>
+    <header class="header">
+        <p style="margin-left:300px;">ОРЭСФ</p>
+        <img src="logo.png" class="logo_img">
+    </header>
+</div>
+<div class="text_p" style="color: #21c0d9;"> <!--Можно будет hr удлинить до границы диаграммы-->
+    <hr>
+    <h1>СТРУКТУРА ФЕДЕРАЛЬНОГО</h1>
+    <h1>БЮДЖЕТА</h1>
+    <hr>
+    <p><b>В миллиардах рублей</b></p>
+</div>
+<div class="container">
+    <canvas id="chart-area" width="400" height="200"></canvas>
+</div>
+<div class="container5">
+    <canvas id="chart-area5" width="400" height="200"></canvas>
+</div>
+<div>
+        <p><b class="text_d" style="color: #21c0d9;">ДОХОДЫ</b></p>
+</div>
+<div>
+    <p style="color: #21c0d9;
+    padding-top: -150px;
+    padding-left: 1250px;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: -37px;
+    margin-bottom: 5px;"><b>РАСХОДЫ</b></p>
+</div>
+<div>
+    <a href="the structure of the federal budget.xlsx" download=""><button>СКАЧАТЬ СТАТИСТИКУ</button></a>
+</div>
+<div style="color: #21c0d9;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    position: relative;
+    top: -360px;
+    left: -600px;">
+    <p><b>Вы также можете подробнее узнать об статистике<br> скачав excel-файл ниже</b></p>
+</div>
+</body>
+</html>

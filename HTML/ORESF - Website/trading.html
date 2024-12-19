@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспорт и Импорт</title>
+    <link rel="icon" href="logotab.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area').getContext('2d');
+            const chartData = {
+                labels: ['Сельскохозяйственное сырье', 'Минеральные продукты', 'Химическая продукция', 'Кожевенное сырье', 'Древесина и бумажные изделия', 'Текстильные изделия', 'Металлы и драгоценные металлы', 'Транспортные средства', 'Прочие товары'],
+                datasets: [
+                    {
+                        label: 'Экспорт',
+                        data: [35965, 277348, 37852, 208, 16994, 1727, 82634, 32670, 7698],
+                        backgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBackgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBorderColor: 'rgba(234, 236, 244, 1)',
+                        borderColor: 'rgba(234, 236, 244, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chart-area5').getContext('2d');
+            const chartData = {
+                labels: ['Сельскохозяйственное сырье', 'Минеральные продукты', 'Химическая продукция', 'Кожевенное сырье', 'Древесина и бумажные изделия', 'Текстильные изделия', 'Металлы и драгоценные металлы', 'Транспортные средства', 'Прочие товары'],
+                datasets: [
+                    {
+                        label: 'Импорт',
+                        data: [34042, 5575, 53814, 1304, 4159, 17020, 21517, 144485, 11615],
+                        backgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBackgroundColor: ['#1f80bd', '#1f31bd', '#bd1f31', '#31bd1f', '#bd5c1f', '#ab1fbd', '#bda81f', '#1fbdaa', '#bd1f56'],
+                        hoverBorderColor: 'rgba(234, 236, 244, 1)',
+                        borderColor: 'rgba(234, 236, 244, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #21c0d9;
+    color: white;
+    padding: 0px;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 0;
+    z-index: 1;
+    }
+    .logo_img {
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    }
+    hr {
+    border: none;
+    border-top: 5px solid #21c0d9;
+    max-width: 600px;
+    margin-left: 0px;
+    }
+    .text_p {
+    padding-top: 150px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .container {
+    width: 25%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 700px;/* Центрирование по горизонтали */
+    margin-top: -400px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    .container5 {
+    width: 26%;
+    height: 500px; /* Высота диаграммы */
+    margin-left: 1300px;/* Центрирование по горизонтали */
+    margin-top: -540px;/* Центрирование по горизонтали */
+    padding: 20px; /* Поля вокруг диаграммы */
+    border: 0px solid #ddd; /* Рамка вокруг диаграммы */
+    }
+    .text_d {
+    padding-top: 100px;
+    padding-left: 900px;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: -100px;
+    margin-bottom: 5px;
+    }
+    button {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    border: none;
+    padding: 20px 60px;
+    background: #21c0d9;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: -80px;
+    left: 90px;
+    }
+</style>
+<body>
+<div>
+    <header class="header">
+        <p style="margin-left:300px;">ОРЭСФ</p>
+        <img src="logo.png" class="logo_img">
+    </header>
+</div>
+<div class="text_p" style="color: #21c0d9;"> <!--Можно будет hr удлинить до границы диаграммы-->
+    <hr>
+    <h1>ТОВАРНАЯ СТРУКТУРА</h1>
+    <h1>ЭКСПОРТА И ИМПОРТА</h1>
+    <hr>
+    <p><b>В миллионах долларов за 2021 г</b></p>
+    <p><b>Примечание:</b><br>По данным ФТС России</p>
+</div>
+<div class="container">
+    <canvas id="chart-area" width="400" height="200"></canvas>
+</div>
+<div class="container5">
+    <canvas id="chart-area5" width="400" height="200"></canvas>
+</div>
+<div>
+    <p><b class="text_d" style="color: #21c0d9;">Экспорт</b></p>
+</div>
+<div>
+    <p style="color: #21c0d9;
+    padding-top: -150px;
+    padding-left: 1250px;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    margin-top: -37px;
+    margin-bottom: 5px;"><b>Импорт</b></p>
+</div>
+<div>
+    <a href="Export and Import.xlsx" download=""><button>СКАЧАТЬ ПОЛНУЮ СТАТИСТИКУ</button></a>
+</div>
+<div style="color: #21c0d9;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 25px;
+    position: relative;
+    top: -270px;
+    left: -600px;">
+    <p><b>Вы также можете скачать полную статистику,<br>которая охватывает период с 1995 по 2021 года.</b></p>
+</div>
+</body>
+</html>
