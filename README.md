@@ -8,3 +8,6 @@
 2. Python_Number Generator
 
    Путь: Главная страница/Python/Number Generator
+
+Список проектов на HTML-CSS-JavaScript:
+1. ORESF - Economic Website
